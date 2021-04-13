@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/molecules/Navbar";
+import Button from "../components/atoms/Button";
+import Input from "../components/atoms/Input";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,28 +16,25 @@ const Login = () => {
   };
 
   return (
-    <div className="text-center">
+    <div>
       <Navbar />
-      <h3 className="p-3">Welcome</h3>
-      <div className="container-sm rounded border p-3 shadow">
-        <div>Masukan Username</div>
-        <input
-          placeholder="Username"
+      <div className="container-sm rounded border p-3 shadow mt-5 mb-5">
+        <h3 className="mt-2 text-center">Login</h3>
+        <Input
+          title="Username"
+          placeholder="Masukan username"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        ></input>
+        />
 
-        <div>Masukan Password</div>
-        <input
-          placeholder="Password"
+        <Input
+          title="Password"
           value={password}
+          placeholder="Masukan password"
           onChange={(e) => setPassword(e.target.value)}
-        ></input>
-
+        />
         <br />
-        <br />
-
-        <input onClick={handleSubmit} type="submit"></input>
+        <Button onClick={handleSubmit} buttonText={"Submit"} />
       </div>
     </div>
   );

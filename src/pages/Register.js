@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/molecules/Navbar";
+import Button from "../components/atoms/Button";
+import Input from "../components/atoms/Input";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,44 +23,41 @@ const Register = () => {
   return (
     <div>
       <Navbar />
-      <div className="text-center">
-        <h3 className="p-3">Register</h3>
-        <div className="container-sm rounded border p-3 shadow">
-          <div>Full Name</div>
-          <input
-            placeholder="Fullname"
+      <div>
+        <div className="container-sm rounded border p-3 shadow mt-5 mb-5">
+          <h3 className="mt-2 text-center">Register</h3>
+          <Input
+            title="Fullname"
+            placeholder="Masukan fullname"
             value={fullname}
             onChange={(e) => setFullName(e.target.value)}
-          ></input>
-          <div>Username</div>
-          <input
-            placeholder="Username"
-            value={username}
+          />
+          <Input
+            title="Username"
+            placeholder="Masukan username"
+            value={fullname}
             onChange={(e) => setUsername(e.target.value)}
-          ></input>
-          <div>Email</div>
-          <input
-            placeholder="Email"
+          />
+          <Input
+            title="Email"
+            placeholder="Masukan email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <div>Phone Number</div>
-          <input
-            placeholder="Phone Number"
+          />
+          <Input
+            title="Phone Number"
+            placeholder="Masukan phone number"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-          ></input>
-          <div>Address</div>
-          <input
-            placeholder="Address"
+          />
+          <Input
+            title="Address"
+            placeholder="Masukan address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-          ></input>
-
+          />
           <br />
-          <br />
-
-          <input type="submit" value="Register" onClick={handleSubmit}></input>
+          <Button onClick={handleSubmit} buttonText={"Register"} />
         </div>
       </div>
     </div>
