@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
-import Dashboard from "../../pages/Dashboard/Dashboard";
-import About from "../../pages/About/About";
-import Register from "../../pages/Register/Register";
-import Login from "../../pages/Login/Login";
+import Dashboard from "../../pages/Dashboard";
+import About from "../../pages/About";
+import Register from "../../pages/Register";
+import Login from "../../pages/Login";
+import AddUser from "../../pages/AddUser";
 
 const index = () => {
   return (
@@ -21,6 +22,9 @@ const index = () => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/add-user">
+          <AddUser />
         </Route>
       </Switch>
     </Router>
