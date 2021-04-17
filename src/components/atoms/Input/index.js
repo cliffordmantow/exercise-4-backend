@@ -3,9 +3,7 @@ import React from "react";
 const index = ({ text, title, type, placeholder, onChange }) => {
   return (
     <div>
-      <label for="exampleInputEmail1" class="form-label mt-3">
-        {title}
-      </label>
+      <label className="form-label mt-3">{title}</label>
 
       <input
         placeholder={placeholder}

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "clifford",
+      "last_name": "mantow",
+      "email": "cliffmantow@gmail.com"
+    },
+    {
+      "email": "Johnny@ymail.com",
+      "first_name": "Johhny ",
+      "last_name": "Doe",
+      "id": 2
+    },
+    {
+      "email": "rpungus@student.id",
+      "first_name": "Richard",
+      "last_name": "Pungus",
+      "id": 3
+    },
+    {
+      "email": "tan@gmail.com",
+      "first_name": "Sin",
+      "last_name": "cos",
+      "id": 4
+    }
+  ]
+}
